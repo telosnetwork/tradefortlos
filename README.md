@@ -16,7 +16,7 @@ To begin, navigate to the project directory: `eosio-contract-template/`
 
     chmod +x deploy.sh
 
-The `messager` contract has already been implemented and is build-ready.
+The `tradefortlos` contract has already been implemented and is build-ready.
 
 ## Build
 
@@ -25,5 +25,3 @@ The `messager` contract has already been implemented and is build-ready.
 ## Deploy
 
     ./deploy.sh contract-name account-name { mainnet | testnet | local }
-
-### Messager Contract API can be found [here](docs/ContractAPI.md).

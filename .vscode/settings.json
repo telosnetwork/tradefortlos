@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "typeinfo": "cpp",
+        "iterator": "cpp",
+        "optional": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "map": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "typeindex": "cpp"
+    }
+}
