@@ -16,9 +16,15 @@ void tradefortlos::ontransfer(name from, name to, asset quantity, string memo)
     {
         action(permission_level{ get_self(), name("active") }, CORE_SYM_ACCOUNT, name("transfer"),
             make_tuple(get_self(),
+                TLOS_BUYER,
+                quantity,
+                std::string("TLOS auto-buy")))
+            .send();
+        action(permission_level{ TLOS_BUYER, name("active") }, CORE_SYM_ACCOUNT, name("transfer"),
+            make_tuple(TLOS_BUYER,
                 name("newdexpocket"),
                 quantity,
-                "{\"type\" : \"buy-market\", \"symbol\" : \"eosio.token-tlos-eos\", \"price\" : \"0.000000\", \"channel\" : \"web\", \"receiver\" : \"" + memo + "\"}"))
+                std::string("{\"type\" : \"buy-market\", \"symbol\" : \"eosio.token-tlos-eos\", \"price\" : \"0.000000\", \"channel\" : \"web\", \"receiver\" : \"" + memo + "\"}")))
             .send();
     }
 }

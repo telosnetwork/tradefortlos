@@ -15,6 +15,7 @@ public:
 
     static constexpr name CORE_SYM_ACCOUNT = name("eosio.token");
     static constexpr symbol CORE_SYM = symbol("EOS", 4);
+    static constexpr name TLOS_BUYER = name("traderoftlos");
 
     ACTION noop();
 
